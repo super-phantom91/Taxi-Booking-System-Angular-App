@@ -1,0 +1,83 @@
+<!-- <div class="parentFormContainer">
+  <img src="../../assets/images/login-page.png" alt="">
+  <div id="formContainer">
+    <h2 class="mb-3">User Log in</h2>
+    <form class="container" id="createForm" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+      <div class="mb-3">
+        <label class="form-label d-flex justify-content-start">Email</label>
+        <input type="email" class="form-control" formControlName="email"
+          [class.is-invalid]="loginForm.get('email')?.invalid && (loginForm.get('email')?.touched || loginForm.get('email')?.dirty)" />
+        <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.touched || loginForm.get('email')?.dirty)"
+          class="invalid-feedback">
+          <div *ngIf="loginForm.get('email')?.errors?.['required']">Email is required.</div>
+          <div *ngIf="loginForm.get('email')?.errors?.['email']">Please enter a valid email.</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label d-flex justify-content-start">Password</label>
+        <input type="password" class="form-control" formControlName="password"
+          [class.is-invalid]="loginForm.controls['password'].invalid && (loginForm.controls['password'].touched || loginForm.controls['password'].dirty)">
+        <div
+          *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].touched || loginForm.controls['password'].dirty)"
+          class="invalid-feedback">Password is required.</div>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary w-100" id="submitBtn"><mat-icon>fingerprint</mat-icon></button>
+      </div>
+      <div id="forgotDiv">
+        <a routerLinkActive="active" routerLink="/forgotpassword">forgot password ?</a>
+        or
+        <a routerLinkActive="active" routerLink="/signup">signup</a>
+      </div>
+    </form>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form id="createForm" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <h3>Eber Ride Login</h3>
+
+        <label for="username">Username</label>
+        <input type="email" class="form-control" placeholder="Email or Phone" formControlName="email"
+        [class.is-invalid]="loginForm.get('email')?.invalid && (loginForm.get('email')?.touched || loginForm.get('email')?.dirty)" />
+      <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.touched || loginForm.get('email')?.dirty)"
+        class="invalid-feedback">
+        <div *ngIf="loginForm.get('email')?.errors?.['required']">Email is required.</div>
+        <div *ngIf="loginForm.get('email')?.errors?.['email']">Please enter a valid email.</div>
+      </div>
+
+        <label for="password">Password</label>
+        <input type="password" class="form-control" placeholder="Password"  formControlName="password"
+        [class.is-invalid]="loginForm.controls['password'].invalid && (loginForm.controls['password'].touched || loginForm.controls['password'].dirty)">
+      <div
+        *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].touched || loginForm.controls['password'].dirty)"
+        class="invalid-feedback">Password is required.</div>
+
+        <div>
+          <button type="submit" class="btn btn-primary w-100" id="submitBtn">Log In</button>
+        </div>
+
+        <hr>
+        <div id="forgotDiv">
+          <a routerLinkActive="active" routerLink="/forgotpassword">forgot password ?</a>
+          or
+          <a routerLinkActive="active" routerLink="/signup">signup</a>
+        </div>
+        <div class="social d-flex justify-content-between">
+          <div class="go d-flex justify-content-center align-items-center"><img src="../../../assets/images/google" alt="google" class="googleimg"> Google</div>
+          <div class="fb d-flex justify-content-center align-items-center"><img src="../../../assets/images/apple-logo-transparent.png" alt="google" class="appleimg"> Apple</div>
+        </div>
+    </form>
+</body>
