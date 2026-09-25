@@ -1,10 +1,155 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --ink: #10151c;
+  --ink-soft: #1c2430;
+  --amber: #f0a500;
+  --amber-deep: #d48f00;
+  --amber-glow: rgba(240, 165, 0, 0.35);
+  --stone: #f3f5f7;
+  --paper: #ffffff;
+  --muted: #6b7585;
+  --line: rgba(16, 21, 28, 0.08);
+  --shadow: 0 18px 50px rgba(16, 21, 28, 0.12);
+  --shadow-soft: 0 8px 24px rgba(16, 21, 28, 0.08);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --font-display: "Sora", sans-serif;
+  --font-body: "Outfit", sans-serif;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(240, 165, 0, 0.08), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(28, 36, 48, 0.06), transparent 50%),
+    var(--stone);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+a {
+  transition: color 0.25s var(--ease), opacity 0.25s var(--ease);
+}
+
+button,
+.btn,
+.mat-mdc-button,
+.mat-mdc-raised-button,
+.mat-mdc-icon-button {
+  transition: transform 0.25s var(--ease), background-color 0.25s var(--ease),
+    color 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+
+button:active,
+.btn:active {
+  transform: translateY(1px);
+}
+
+.form-control,
+input.form-control,
+select.form-control,
+textarea.form-control {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 0.9rem;
+  background: var(--paper);
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.form-control:focus {
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px var(--amber-glow);
+}
+
+.btn-primary,
+button.btn-primary {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.btn-primary:hover,
+button.btn-primary:hover {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: var(--ink);
+}
+
+.mat-drawer-container {
+  background: transparent !important;
+}
+
+.mat-mdc-table,
+table {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 21, 28, 0.2);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 21, 28, 0.35);
+  background-clip: content-box;
+  border: 2px solid transparent;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes soft-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes amber-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--amber-glow); }
+  50% { box-shadow: 0 0 0 12px transparent; }
+}
+
+.page-enter {
+  animation: fade-up 0.55s var(--ease) both;
+}

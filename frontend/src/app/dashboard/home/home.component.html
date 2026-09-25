@@ -1,84 +1,96 @@
-<section class="hero">
-  <button (click)="navigateToCreateRide()">Book Now</button>
-</section>
-
-<section class="cards">
-  <div class="card">
-    <div class="card-image">
-      <img src="../../../assets/images/auto.png" alt="Taxi 1" />
-    </div>
-    <div class="card-content">
-      <h4>Taxi Model 1</h4>
-      <p>Spacious and comfortable ride for your journey.</p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-image">
-      <img src="../../../assets/images/thar.webp" alt="Taxi 2" />
-    </div>
-    <div class="card-content">
-      <h4>Taxi Model 2</h4>
-      <p>Modern and reliable transportation at your service.</p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-image">
-      <img src="../../../assets/images/scorpio.webp" alt="Taxi 3" />
-    </div>
-    <div class="card-content">
-      <h4>Taxi Model 3</h4>
-      <p>Eco-friendly and efficient rides for a better planet.</p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-image">
-      <img src="../../../assets/images/Ola.jpg" alt="Taxi 3" />
-    </div>
-    <div class="card-content">
-      <h4>Taxi Model 3</h4>
-      <p>Eco-friendly and efficient rides for a better planet.</p>
-    </div>
+<section class="hero page-enter">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="brand">Eber Ride</p>
+    <h1>City rides, on your time.</h1>
+    <p class="hero-copy">Book a clean, reliable taxi in a few taps — tracked from pickup to drop-off.</p>
+    <button type="button" class="hero-cta" (click)="navigateToCreateRide()">Book a ride</button>
   </div>
 </section>
 
-<section class="map-container">
-  <h2 class="map-heading">Start Your Journey</h2>
+<section class="fleet-section">
+  <div class="section-intro">
+    <h2>Choose your ride</h2>
+    <p>Vehicle options matched to your trip — from city hops to longer journeys.</p>
+  </div>
+  <div class="fleet-grid">
+    <article class="fleet-item">
+      <img src="../../../assets/images/auto.png" alt="City auto" />
+      <div>
+        <h3>City Auto</h3>
+        <p>Quick, affordable trips across town.</p>
+      </div>
+    </article>
+    <article class="fleet-item">
+      <img src="../../../assets/images/thar.webp" alt="SUV ride" />
+      <div>
+        <h3>SUV</h3>
+        <p>Spacious comfort for groups and luggage.</p>
+      </div>
+    </article>
+    <article class="fleet-item">
+      <img src="../../../assets/images/scorpio.webp" alt="Premium SUV" />
+      <div>
+        <h3>Premium</h3>
+        <p>Smooth rides for longer routes.</p>
+      </div>
+    </article>
+    <article class="fleet-item">
+      <img src="../../../assets/images/Ola.jpg" alt="Electric option" />
+      <div>
+        <h3>Eco</h3>
+        <p>Efficient rides with a lighter footprint.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="map-section">
+  <div class="section-intro">
+    <h2>Start your journey</h2>
+    <p>Preview routes and nearby coverage on the live map.</p>
+  </div>
   <div id="map" class="map"></div>
 </section>
 
-<section class="customers">
-  <h3 class="customers-heading">Join Our Happy Customers</h3>
-  <p>Total Customers: <span id="customer-count">5000+</span></p>
-  <div class="feedback">
-    <div class="feedback-item">
-      <p>"Great service, on-time and friendly drivers!"</p>
-      <p>- Sarah J.</p>
-    </div>
-    <div class="feedback-item">
-      <p>"Easy booking process and clean taxis."</p>
-      <p>- John S.</p>
-    </div>
-    <div class="feedback-item">
-      <p>"Best taxi app I've used so far!"</p>
-      <p>- Emily M.</p>
-    </div>
+<section class="trust-section">
+  <div class="section-intro">
+    <h2>Riders who trust Eber</h2>
+    <p>Join <span class="count">5000+</span> customers moving with confidence.</p>
+  </div>
+  <div class="quotes">
+    <blockquote>
+      <p>“Great service, on-time and friendly drivers.”</p>
+      <cite>Sarah J.</cite>
+    </blockquote>
+    <blockquote>
+      <p>“Easy booking process and clean taxis.”</p>
+      <cite>John S.</cite>
+    </blockquote>
+    <blockquote>
+      <p>“Best taxi app I’ve used so far.”</p>
+      <cite>Emily M.</cite>
+    </blockquote>
   </div>
 </section>
 
-<section class="services">
-  <h3 class="service-heading">Our Services</h3>
-  <div  class="service-container">
-    <div class="service">
-      <h4>Ride Booking</h4>
-      <p>Quick and convenient ride booking.</p>
+<section class="services-section">
+  <div class="section-intro">
+    <h2>What you get</h2>
+    <p>Everything you need for a calm, reliable trip.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-item">
+      <h3>Ride booking</h3>
+      <p>Quick dispatch with clear status updates.</p>
     </div>
-    <div class="service">
-      <h4>Payment Options</h4>
-      <p>Secure and flexible payment methods.</p>
+    <div class="service-item">
+      <h3>Flexible payments</h3>
+      <p>Secure checkout options that fit your routine.</p>
     </div>
-    <div class="service">
-      <h4>24/7 Support</h4>
-      <p>Customer support always available.</p>
+    <div class="service-item">
+      <h3>24/7 support</h3>
+      <p>Help whenever you need it, day or night.</p>
     </div>
   </div>
 </section>

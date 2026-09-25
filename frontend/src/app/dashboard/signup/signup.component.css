@@ -1,74 +1,164 @@
-
-.maindiv{
-  height: 100vh;
-  width: 100%;
-  /* background-color: #5600b8; */
-  background-color: #5600b8;
+:host {
+  display: block;
+  min-height: 100vh;
 }
-.parentFormContainer{
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  background: var(--ink);
+}
+
+.auth-media {
+  position: relative;
+  background:
+    linear-gradient(145deg, rgba(16, 21, 28, 0.35), rgba(16, 21, 28, 0.72)),
+    url("../../../assets/images/taxi-booking-app.png") center / cover no-repeat;
+  overflow: hidden;
+}
+
+.auth-media::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -20% 20%;
+  height: 55%;
+  background: radial-gradient(circle, var(--amber-glow), transparent 65%);
+  animation: soft-float 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.auth-media-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(16, 21, 28, 0.55));
+}
+
+.auth-brand {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  animation: fade-up 0.7s var(--ease) both;
+}
+
+.auth-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.35));
+}
+
+.auth-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+  background:
+    radial-gradient(600px 300px at 80% 0%, rgba(240, 165, 0, 0.12), transparent 60%),
+    var(--stone);
+}
+
+.auth-form {
+  width: min(440px, 100%);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 2.25rem 2rem 2rem;
+  animation: fade-up 0.65s var(--ease) 0.08s both;
+}
+
+.auth-eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--amber-deep);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.auth-form h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.auth-sub {
+  margin: 0.65rem 0 1.25rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.auth-form label {
+  display: block;
+  margin: 0.85rem 0 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-align: left;
+}
+
+.auth-form input {
+  height: 46px;
+}
+
+.auth-submit {
+  margin-top: 1.35rem;
+  height: 48px;
+}
+
+.auth-links {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-#formContainer{
-  background-color: #ffffff;
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255,255,255,0.1);
-  box-shadow: 0 0 40px rgba(8,7,16,0.6);
-  /* background-color: rgba(255,255,255,0.13); */
-  
-  width: 30vw;
-  height: 50%;
-  padding: 20px;
-  margin: 40px;
-}
-input{
-  width: 100%;
-  padding: 5PX;
-  background-color: rgba(136, 136, 136, 0.07);
-  border-radius: 3px;
-  font-size: 14px;
-  font-weight: 300;
-}
-#login{
-  padding-top: 10px;
-}
-#login a{
-  color: tomato;
-  text-decoration: none;
-  cursor: pointer;
-}
-::placeholder{
-  color: #666666;
-}
-button{
-  margin-top: 10px;
-  width: 100%;
-  background-color: #000000;
-  color: #ffffff;
-  /* padding: 15px 0;
-  font-size: 18px; */
-  font-weight: 600;
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
-}
-button:hover{
-background-color: #ffffff;
-color: #000000;
-border: 1px solid black;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-top: 1.1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
-@media screen and (max-width: 480px) {
-  #formContainer{
-    width: 80vw;
+.auth-links a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
 }
+
+.auth-links a:hover {
+  color: var(--amber-deep);
 }
-@media screen and (max-width: 780px) {
-  #formContainer{
-    width: 80vw;
-}
+
+@media (max-width: 900px) {
+  .auth-page {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-media {
+    min-height: 24vh;
+  }
+
+  .auth-brand {
+    top: 1.25rem;
+    left: 1.25rem;
+  }
+
+  .auth-panel {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .auth-form {
+    padding: 1.75rem 1.35rem;
+  }
 }

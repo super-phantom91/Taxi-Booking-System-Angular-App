@@ -1,64 +1,89 @@
-<div class="maindiv">
-  <div class="parentFormContainer">
-    <div id="formContainer">
-      <h3 class="mb-3">Admin Registration Panel</h3>
+<div class="auth-page page-enter">
+  <div class="auth-media" aria-hidden="true">
+    <div class="auth-media-overlay"></div>
+    <div class="auth-brand">
+      <img src="../../../assets/images/frontal-taxi-cab.png" alt="" class="auth-logo">
+      <span>Eber Ride</span>
+    </div>
+  </div>
 
-      <form class="container" [formGroup]="myForm" (ngSubmit)="submitForm()">
+  <div class="auth-panel">
+    <div class="auth-form">
+      <p class="auth-eyebrow">Get started</p>
+      <h1>Create your admin account</h1>
+      <p class="auth-sub">Set up access to manage the Eber Ride control panel.</p>
 
-        <div class="mb-3">
-          <label class="form-label d-flex justify-content-start">Name</label>
-          <input type="text" class="form-control" placeholder="Enter your name" formControlName="adminName"
-            [class.is-invalid]="myForm.get('adminName')?.invalid && (myForm.get('adminName')?.touched || myForm.get('adminName')?.dirty)" />
-          <div *ngIf="myForm.get('adminName')?.invalid && (myForm.get('adminName')?.touched || myForm.get('adminName')?.dirty)"
-            class="invalid-feedback">
-            <div *ngIf="myForm.get('adminName')?.errors?.['required']">Name is required.</div>
-          </div>
+      <form [formGroup]="myForm" (ngSubmit)="submitForm()">
+        <label>Name</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter your name"
+          formControlName="adminName"
+          [class.is-invalid]="myForm.get('adminName')?.invalid && (myForm.get('adminName')?.touched || myForm.get('adminName')?.dirty)"
+        />
+        <div
+          *ngIf="myForm.get('adminName')?.invalid && (myForm.get('adminName')?.touched || myForm.get('adminName')?.dirty)"
+          class="invalid-feedback d-block"
+        >
+          <div *ngIf="myForm.get('adminName')?.errors?.['required']">Name is required.</div>
         </div>
 
-        <div class="mb-3">
-          <label class="form-label d-flex justify-content-start">Email</label>
-          <input type="email" class="form-control" placeholder="Enter your email" formControlName="email"
-            [class.is-invalid]="myForm.get('email')?.invalid && (myForm.get('email')?.touched || myForm.get('email')?.dirty)" />
-          <div *ngIf="myForm.get('email')?.invalid && (myForm.get('email')?.touched || myForm.get('email')?.dirty)"
-            class="invalid-feedback">
-            <div *ngIf="myForm.get('email')?.errors?.['required']">Email is required.</div>
-            <div *ngIf="myForm.get('email')?.errors?.['email']">Please enter a valid email.</div>
-          </div>
-        </div>
-        
-        <div class="mb-3">
-          <label class="form-label d-flex justify-content-start">Password</label>
-          <input type="password" class="form-control" placeholder="Enter your password" formControlName="password"
-            [class.is-invalid]="myForm.controls['password'].invalid && (myForm.controls['password'].touched || myForm.controls['password'].dirty)">
-          <div *ngIf="myForm.controls['password'].invalid && (myForm.controls['password'].touched || myForm.controls['password'].dirty)"
-            class="invalid-feedback">
-            <div *ngIf="myForm.controls['password'].hasError('required')">Password is required.</div>
-            <div *ngIf="myForm.controls['password'].hasError('minlength')">Password must be at least 8 characters long.</div>
-          </div>
+        <label>Email</label>
+        <input
+          type="email"
+          class="form-control"
+          placeholder="Enter your email"
+          formControlName="email"
+          [class.is-invalid]="myForm.get('email')?.invalid && (myForm.get('email')?.touched || myForm.get('email')?.dirty)"
+        />
+        <div
+          *ngIf="myForm.get('email')?.invalid && (myForm.get('email')?.touched || myForm.get('email')?.dirty)"
+          class="invalid-feedback d-block"
+        >
+          <div *ngIf="myForm.get('email')?.errors?.['required']">Email is required.</div>
+          <div *ngIf="myForm.get('email')?.errors?.['email']">Please enter a valid email.</div>
         </div>
 
-        <div class="mb-3">
-          <label class="form-label d-flex justify-content-start">Confirm Password</label>
-          <input type="text" class="form-control" placeholder="Confirm your password" formControlName="cnfpassword"
-            [class.is-invalid]="myForm.controls['cnfpassword'].invalid && (myForm.controls['cnfpassword'].touched || myForm.controls['cnfpassword'].dirty)">
-          <div *ngIf="myForm.controls['cnfpassword'].invalid && (myForm.controls['cnfpassword'].touched || myForm.controls['cnfpassword'].dirty)"
-            class="invalid-feedback">
-            <div *ngIf="myForm.controls['cnfpassword'].hasError('required')">Password is required.</div>
-            <div *ngIf="myForm.controls['cnfpassword'].hasError('minlength')">Password must be at least 8 characters long.</div>
-          </div>
+        <label>Password</label>
+        <input
+          type="password"
+          class="form-control"
+          placeholder="Enter your password"
+          formControlName="password"
+          [class.is-invalid]="myForm.controls['password'].invalid && (myForm.controls['password'].touched || myForm.controls['password'].dirty)"
+        />
+        <div
+          *ngIf="myForm.controls['password'].invalid && (myForm.controls['password'].touched || myForm.controls['password'].dirty)"
+          class="invalid-feedback d-block"
+        >
+          <div *ngIf="myForm.controls['password'].hasError('required')">Password is required.</div>
+          <div *ngIf="myForm.controls['password'].hasError('minlength')">Password must be at least 8 characters long.</div>
         </div>
 
-        <div>
-          <button type="submit" class="btn btn-primary w-100" id="submitBtn">
-            Submit
-          </button>
+        <label>Confirm Password</label>
+        <input
+          type="password"
+          class="form-control"
+          placeholder="Confirm your password"
+          formControlName="cnfpassword"
+          [class.is-invalid]="myForm.controls['cnfpassword'].invalid && (myForm.controls['cnfpassword'].touched || myForm.controls['cnfpassword'].dirty)"
+        />
+        <div
+          *ngIf="myForm.controls['cnfpassword'].invalid && (myForm.controls['cnfpassword'].touched || myForm.controls['cnfpassword'].dirty)"
+          class="invalid-feedback d-block"
+        >
+          <div *ngIf="myForm.controls['cnfpassword'].hasError('required')">Password is required.</div>
+          <div *ngIf="myForm.controls['cnfpassword'].hasError('minlength')">Password must be at least 8 characters long.</div>
         </div>
-        <div id="login">
-          Already have an account ?
-          <a routerLinkActive="active" routerLink="/login">Login</a>
+
+        <button type="submit" class="btn btn-primary w-100 auth-submit" id="submitBtn">Create account</button>
+
+        <div id="login" class="auth-links">
+          Already have an account?
+          <a routerLinkActive="active" routerLink="/login">Log in</a>
         </div>
       </form>
     </div>
-
   </div>
 </div>

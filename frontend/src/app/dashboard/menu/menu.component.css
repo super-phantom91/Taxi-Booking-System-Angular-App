@@ -1,0 +1,79 @@
+.shell {
+  min-height: calc(100vh - 64px);
+  background: transparent !important;
+}
+
+.side-nav {
+  width: 250px;
+  background: var(--ink) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.side-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1.35rem 1.1rem 0.85rem;
+}
+
+.side-brand .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--amber);
+  box-shadow: 0 0 0 6px var(--amber-glow);
+}
+
+.side-brand h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.nav-list {
+  padding: 0.35rem 0.55rem 1.25rem;
+}
+
+.nav-list .mat-mdc-list-item,
+.nav-list .mat-list-item {
+  margin-bottom: 0.2rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.nav-list button {
+  width: 100%;
+  justify-content: flex-start !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.nav-list button:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: var(--amber) !important;
+}
+
+.nav-list mat-icon {
+  margin-right: 0.55rem;
+  color: var(--amber);
+}
+
+.shell-content {
+  background: transparent !important;
+}
+
+.content-frame {
+  min-height: 600px;
+  padding: 0.5rem 0 1rem;
+  text-align: center;
+}
+
+:host ::ng-deep .mat-mdc-menu-panel,
+:host ::ng-deep .mat-menu-panel {
+  border-radius: 14px !important;
+  overflow: hidden;
+}

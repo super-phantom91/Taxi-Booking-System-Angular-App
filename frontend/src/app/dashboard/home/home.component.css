@@ -1,405 +1,261 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Fasthand&family=Noto+Sans+Vai&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofia&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-  }
-
-  
-  .hero {
-    background-image: url('../../../assets/images/dealit.png');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 6rem 0;
-    color: #fff;
-    height: 100vh;
-    position: relative;
-  }
-  
-  .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero p {
-    font-size: 1.4rem;
-    margin-bottom: 2rem;
-  }
-  
-  .hero button {
-    position: absolute;
-    bottom: 30px; /* Adjust this value as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    background-color: #ffac33;
-    border: none;
-    border-radius: 5px;
-    color: #333;
-    cursor: pointer;
-  }
-  
-  .services {
-    text-align: center;
-    padding: 4rem 0;
-  }
-
-  .service-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-  
-  .service {
-    flex: 1;
-    max-width: 300px;
-    margin: 0 1rem;
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .map-container {
-    text-align: center;
-    padding: 4rem 0;
-  }
-  
-  .map {
-    max-width: 100%;
-    border-radius: 10px;
-  }
-  
-  .customers {
-    text-align: center;
-    padding: 4rem 0;
-  }
-  
-  .customers h3 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  #customer-count {
-    font-weight: bold;
-    color: #ffac33; /* Adjust color as needed */
-  }
-  
-  .feedback {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .feedback-item {
-    flex: 1;
-    max-width: 300px;
-    margin: 0 1rem;
-    padding: 1.5rem;
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact {
-    text-align: center;
-    padding: 4rem 0;
-    background-color: #f4f4f4;
-  }
-  
-  .contact-form {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact-form label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .contact-form button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: #ffac33;
-    border: none;
-    border-radius: 5px;
-    color: #333;
-    cursor: pointer;
-  }
-/* Cards Section Styles */
-.cards {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding: 4rem 0;
-  }
-  
-  .card {
-    flex: 1;
-    max-width: 300px;
-    margin: 0 1rem;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-  
-  .card-image {
-    position: relative;
-    flex: 0 0 60%; /* Set image height as a percentage of the card height */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-  
-  .card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .card-content {
-    flex: 1;
-    padding: 1rem;
-  }
-  
-  .card h4 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .card p {
-    font-size: 1rem;
-    margin-bottom: 0;
-  }
-  
-  
-  
-  .map-container {
-    text-align: center;
-    padding: 3rem 0;
-    margin: 0 1rem;
-  }
-  .map-heading {
-    font-size: 72px;
-    font-weight: bold;
-    margin-bottom: 4rem;
-    color: #000000; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    /* font-family: 'Barlow', sans-serif;
-    font-family: 'Fasthand', cursive;
-    font-family: 'Noto Sans Vai', sans-serif;
-    font-family: 'Poppins', sans-serif; */
-    font-family: 'Sofia', cursive;
-  }
-  
-  .map {
-    max-width: 1000px;
-    height: 400px;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  }
-  .customers-heading{
-    font-family: 'Fasthand', cursive;
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 4rem;
-    color: #000000; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  .service-heading{
-    /* font-family: 'Fasthand', cursive; */
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    color: #000000; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  }
-
-
-
-  @keyframes bgScroll {
-    from {
-      background-position: -100% 0;
-    }
-    to {
-      background-position: 100% 0;
-    }
-  }
-
-@media screen and (max-width: 768px) {
-  .hero {
-    background-size: cover;
-    text-align: center;
-    padding: 6rem 0;
-    color: #fff;
-    height: 100vh;
-    position: relative;
-    animation: bgScroll 30s linear infinite; /* Adjust animation duration as needed */
-  }
-  .cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding: 3rem 0;
-  }
-  .card {
-    flex: 1;
-    max-width: 300px;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s; /* Transition added */
-    overflow: hidden;
-  }
-  
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-  }
-  .map-container {
-    padding: 3rem 0;
-  }
-
-  .map-heading {
-    font-size: 36px;
-    margin-bottom: 2rem;
-  }
-
-/* Customers section */
-.customers {
-  text-align: center;
-  padding: 3rem 0; /* Adjust padding as needed */
-}
-
-/* Customers heading */
-.customers-heading {
-  font-family: 'Fasthand', cursive;
-  font-size: 36px; /* Adjust font size as needed */
-  font-weight: bold;
-  margin-bottom: 2rem;
-  color: #000000;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  line-height: 1.2; /* Adjust line height as needed */
-  text-align: center; /* Center align text on mobile view */
-}
-
-
-/* Total Customers count */
-#customer-count {
-  font-weight: bold;
-  color: #ffac33; /* Adjust color as needed */
-}
-
-/* Feedback container */
-.feedback {
-  display: flex;
-  flex-direction: column; /* Change to column for mobile view */
-  align-items: center;
-  gap: 2rem;
-  margin-top: 2rem; /* Add space between feedback items */
-}
-
-/* Individual feedback items */
-.feedback-item {
-  max-width: 300px;
-  padding: 1.5rem;
-  background-color: #f4f4f4;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s; /* Transition added */
-  text-align: center;
-}
-
-/* Add hover effect to feedback items */
-.feedback-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Style the contents within the feedback items */
-.feedback-item p {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.feedback-item p:last-child {
-  margin-bottom: 0; /* Remove margin for the last paragraph */
-}
-
-
-/* Services section */
-.services {
-  text-align: center;
-  padding: 3rem 0;
-}
-
-/* Service heading */
-.service-heading {
-  font-size: 36px; /* Adjust font size as needed */
-  margin-bottom: 2rem;
-}
-.service-container {
+:host {
   display: block;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 0 auto; /* Center the container */
 }
 
-/* Individual service cards */
-.service {
-  max-width: 300px;
-  margin: 0 auto 2rem; /* Add space between cards */
-  padding: 1.5rem;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  background:
+    url("../../../assets/images/dealit.png") center / cover no-repeat;
+  color: #fff;
+  overflow: hidden;
 }
 
-/* Add hover effect to cards */
-.service:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(16, 21, 28, 0.15) 0%, rgba(16, 21, 28, 0.55) 45%, rgba(16, 21, 28, 0.88) 100%),
+    radial-gradient(700px 320px at 70% 20%, rgba(240, 165, 0, 0.22), transparent 60%);
 }
 
-/* Style the contents within the service card */
-.service h4 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(720px, calc(100% - 3rem));
+  margin: 0 auto 4.5rem;
+  text-align: left;
+  animation: fade-up 0.8s var(--ease) both;
 }
 
-.service p {
+.brand {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--amber);
+  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+  font-weight: 600;
+  line-height: 1.15;
+  max-width: 14ch;
+}
+
+.hero-copy {
+  margin: 1rem 0 1.75rem;
+  max-width: 36ch;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.hero-cta {
+  appearance: none;
+  border: none;
+  border-radius: 999px;
+  padding: 0.95rem 1.8rem;
+  background: var(--amber);
+  color: var(--ink);
+  font-family: var(--font-body);
   font-size: 1rem;
-  margin-bottom: 0;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(240, 165, 0, 0.35);
+  animation: amber-pulse 2.8s ease-in-out infinite;
 }
 
+.hero-cta:hover {
+  background: #ffb81f;
+  transform: translateY(-2px);
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 2.5rem;
+  padding: 0 1rem;
+  animation: fade-up 0.6s var(--ease) both;
+}
+
+.section-intro h2 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  color: var(--ink);
+}
+
+.section-intro p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+
+.fleet-section,
+.map-section,
+.trust-section,
+.services-section {
+  padding: 5rem 1.25rem;
+}
+
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.fleet-item {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+
+.fleet-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow);
+}
+
+.fleet-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.fleet-item div {
+  padding: 1rem 1.1rem 1.25rem;
+  text-align: left;
+}
+
+.fleet-item h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.1rem;
+}
+
+.fleet-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.map {
+  max-width: 1000px;
+  height: 420px;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.count {
+  color: var(--amber-deep);
+  font-weight: 700;
+}
+
+.quotes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.quotes blockquote {
+  margin: 0;
+  padding: 1.5rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  text-align: left;
+  transition: transform 0.35s var(--ease);
+}
+
+.quotes blockquote:hover {
+  transform: translateY(-6px);
+}
+
+.quotes p {
+  margin: 0 0 1rem;
+  font-size: 1.02rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.quotes cite {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.service-item {
+  padding: 1.6rem 1.4rem;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 18px;
+  text-align: left;
+  transition: transform 0.35s var(--ease), background 0.35s var(--ease);
+}
+
+.service-item:hover {
+  transform: translateY(-6px);
+  background: var(--ink-soft);
+}
+
+.service-item h3 {
+  margin: 0 0 0.45rem;
+  color: var(--amber);
+  font-size: 1.15rem;
+}
+
+.service-item p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.5;
+}
+
+@media (max-width: 960px) {
+  .fleet-grid,
+  .quotes,
+  .services-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+
+  .hero-content {
+    margin-bottom: 3rem;
+  }
+
+  .fleet-section,
+  .map-section,
+  .trust-section,
+  .services-section {
+    padding: 3.5rem 1rem;
+  }
+
+  .map {
+    height: 300px;
+  }
 }
