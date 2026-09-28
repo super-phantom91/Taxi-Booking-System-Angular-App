@@ -71,9 +71,3 @@
   padding: 0.5rem 0 1rem;
   text-align: center;
 }
-
-:host ::ng-deep .mat-mdc-menu-panel,
-:host ::ng-deep .mat-menu-panel {
-  border-radius: 14px !important;
-  overflow: hidden;
-}

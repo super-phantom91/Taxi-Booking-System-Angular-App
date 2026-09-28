@@ -153,3 +153,219 @@ table {
 .page-enter {
   animation: fade-up 0.55s var(--ease) both;
 }
+
+.mat-mdc-menu-panel {
+  border-radius: 14px !important;
+}
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  border-radius: 20px !important;
+}
+
+/* Routed components are inline by default, which blocks the route transform animation. */
+.content-frame > router-outlet + * {
+  display: block;
+}
+
+/* Admin pages: page stylesheets are component-scoped, so these selectors need the
+   extra `body .content-frame` specificity to win over them. */
+body .content-frame .filter-section {
+  flex-wrap: wrap;
+  padding: 0.85rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+body .content-frame #search-input,
+body .content-frame #filter-dropdown,
+body .content-frame #pageSize,
+body .content-frame #formContainer input:not([type="file"]):not([type="checkbox"]):not([type="radio"]),
+body .content-frame #formContainer select {
+  min-height: 42px;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+body .content-frame #search-input:focus,
+body .content-frame #filter-dropdown:focus,
+body .content-frame #pageSize:focus,
+body .content-frame #formContainer input:focus,
+body .content-frame #formContainer select:focus {
+  outline: none;
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px var(--amber-glow);
+}
+
+body .content-frame #showbtn,
+body .content-frame #searchbtn,
+body .content-frame #search-button,
+body .content-frame #filterbtn,
+body .content-frame #clearbtn,
+body .content-frame #formContainer button:not(.btn):not(.mat-mdc-button-base) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.6rem 1.15rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  box-shadow: none;
+  cursor: pointer;
+  transition: transform 0.25s var(--ease), background-color 0.25s var(--ease),
+    color 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+
+body .content-frame #searchbtn:hover,
+body .content-frame #search-button:hover,
+body .content-frame #filterbtn:hover,
+body .content-frame #formContainer button:not(.btn):not(.mat-mdc-button-base):hover {
+  background: var(--ink-soft);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+body .content-frame #showbtn {
+  background: var(--amber);
+  color: var(--ink);
+}
+
+body .content-frame #showbtn:hover {
+  background: #ffb81f;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(240, 165, 0, 0.3);
+}
+
+body .content-frame #clearbtn {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+body .content-frame #clearbtn:hover {
+  background: rgba(16, 21, 28, 0.05);
+}
+
+body .content-frame #formContainer {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 1.75rem;
+  animation: fade-up 0.45s var(--ease) both;
+}
+
+body .content-frame #formContainer label,
+body .content-frame .updateContainer label {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+body .content-frame #tableContainer {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  padding: 1.25rem;
+}
+
+body .content-frame #tableContainer .table {
+  --bs-table-bg: transparent;
+  margin-bottom: 0;
+  color: var(--ink);
+}
+
+body .content-frame #tableContainer thead th {
+  background: var(--stone);
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--line);
+}
+
+body .content-frame #tableContainer tbody,
+body .content-frame #tableContainer td {
+  color: var(--ink);
+}
+
+body .content-frame #tableContainer td {
+  vertical-align: middle;
+  border-color: var(--line);
+}
+
+body .content-frame #tableContainer tbody tr > * {
+  transition: background-color 0.2s var(--ease);
+}
+
+body .content-frame #tableContainer tbody tr:hover > * {
+  background-color: rgba(240, 165, 0, 0.06);
+}
+
+body .content-frame #tableContainer td img {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+body .content-frame .page-link {
+  margin: 0 0.2rem;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  transition: background-color 0.25s var(--ease), border-color 0.25s var(--ease), color 0.25s var(--ease);
+}
+
+body .content-frame .page-link:hover:not(:disabled) {
+  border-color: var(--amber);
+  background: rgba(240, 165, 0, 0.08);
+  color: var(--ink);
+}
+
+body .content-frame .page-link.active {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff;
+}
+
+body .content-frame .page-link:disabled {
+  opacity: 0.45;
+}
+
+body .content-frame .card-container .card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+
+body .content-frame .card-container .card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
